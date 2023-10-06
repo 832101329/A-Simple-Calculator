@@ -1,0 +1,44 @@
+<!DOCTYPE html><!--The basic format of html at the beginning-->
+<html>
+<head>
+    <title>a simple calculator</title>  <!--This step is to add a title name to your web page-->
+    <link rel="stylesheet" type="text/css" href="styles.css"><!--Includes css folders to modify the calculator's buttons and interface sizes-->
+</head>
+<body>
+    <div class="calculator"><!--Create a class function to assign keys to the calculator-->
+        <input type="text" id="result" readonly>
+        <div class="keypad">
+            <div class="row">
+                <button onclick="appendExpression('7')">7</button> <!-- add button 7 -->
+                <button onclick="appendExpression('8')">8</button> <!-- add button 8 -->
+                <button onclick="appendExpression('9')">9</button> <!-- add button9 -->
+                <button onclick="appendExpression('/')">÷</button> <!-- add button divide -->
+            </div>
+            <div class="row">
+                <button onclick="appendExpression('4')">4</button> <!-- add button4 -->
+                <button onclick="appendExpression('5')">5</button> <!-- add button5 -->
+                <button onclick="appendExpression('6')">6</button> <!-- add button6 -->
+                <button onclick="appendExpression('*')">*</button> <!-- add button multiple -->
+            </div>
+            <div class="row">
+                <button onclick="appendExpression('1')">1</button> <!-- add button1 -->
+                <button onclick="appendExpression('2')">2</button> <!-- add button2 -->
+                <button onclick="appendExpression('3')">3</button> <!-- add button3 -->
+                <button onclick="appendExpression('-')">-</button> <!-- add button subtraction -->
+            </div>
+            <div class="row">
+                <button onclick="appendExpression('0')">0</button> <!-- add button0 -->
+                <button onclick="appendExpression('.')">.</button> <!-- add button decimal point -->
+                <button onclick="calculateResult()">=</button> <!-- add button equal to -->
+                <button onclick="appendExpression('+')">+</button> <!-- add button plus -->
+            </div>
+            <div class="row">
+                <button onclick="deleteLastCharacter()">De</button> <!-- add button delete -->
+                <button onclick="clearResult()">Ac</button> <!-- add button return to zero -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script><!-- Includes css files to define algorithms for the calculator -->
+</body>
+</html>
